@@ -35,8 +35,11 @@ app.post("/AddUsers",async(req,res)=>{
       email:req.body.email,
       address:req.body.address
     }
-    await User.create(obj)
-    res.send("form submitted")
+    const user=await User.create(obj)
+    res.send({
+      "msg":"user added successfully",
+      "user":user
+    })
   }catch(err){
     res.send(err)
   }
