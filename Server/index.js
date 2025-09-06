@@ -11,7 +11,7 @@ app.use(bodyParser.json());
 app.use(cors())
 
 
-mongoose.connect("mongodb://127.0.0.1:27017/Crud")
+mongoose.connect("mongodb+srv://gauravraner83_db_user:Snm7InQoVZ0DjizY@cluster0.fxumpce.mongodb.net/crudDB?retryWrites=true&w=majority&appName=Cluster0")
 .then(()=>console.log("db connected"))
 .catch((err)=>console.log(err))
 
