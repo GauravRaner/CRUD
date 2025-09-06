@@ -5,7 +5,7 @@ import cors from 'cors'
 
 
 const app=express()
-const PORT=8000
+const PORT=process.env.PORT || 8000
 
 app.use(bodyParser.json());
 app.use(cors())
@@ -26,8 +26,7 @@ const User=mongoose.model("User",userSchema)
 
 app.get("/",async(req,res)=>{
 res.send("running ...");
-}
-
+});
 app.post("/AddUsers",async(req,res)=>{
   try{
     const obj={
