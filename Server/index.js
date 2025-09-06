@@ -36,8 +36,6 @@ app.post("/AddUsers",async(req,res)=>{
       address:req.body.address
     }
     await User.create(obj)
-    log
-  
     res.send("form submitted")
   }catch(err){
     res.send(err)
