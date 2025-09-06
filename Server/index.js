@@ -24,6 +24,10 @@ const userSchema=new mongoose.Schema({
 
 const User=mongoose.model("User",userSchema)
 
+app.get("/",async(req,res)=>{
+res.send("running ...");
+}
+
 app.post("/AddUsers",async(req,res)=>{
   try{
     const obj={
